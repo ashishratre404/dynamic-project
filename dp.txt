@@ -1,0 +1,78 @@
+  #----------- Dynamic Programming -------------#
+
+Dynamic Programming
+    --> Optimization over recursion
+
+Approach
+    - Find out recursion solution
+    - convert into dp
+        - Memoization
+        - Tabulation
+
+    # Memoization: 
+        - recursion method (recursion is converted to Dynamic Programming using some space for storing data)
+        - Top Down approach that means it solves bigger problems then solve for its subproblems repeatedly.
+    # Tabulation: 
+        - Iterative method
+        - Bottom Up approach
+
+1. Basic Problems
+    i. Fibonacci 
+    ii. Climbing Stairs
+        - given a Stairs
+        - can move either one step or two steps at a time
+        - calculate no. of possible ways to reach top of Stairs
+    
+    Bottom Up approach:
+        - start with top, now see how many ways are possible to reach at top from current position i.e. Only One ways
+        - then come one step Down and check posible ways to reach top again that would be Only One way posible
+        - come Down one step again, check for posible ways (we can use value that are already calculated, no need to check for it again)
+        - repeat this steps, for any step, no. posible ways = sum of no. of posible ways from last two steps
+        - keep storing this value, here we need only two value(last two) for any steps so need to make array or any other.
+
+        example:
+            - len n = 5
+            - 0(ground level), 1, 2, 3, 4 (secondlastStep), 5 (lastStep)
+            - now start from 3
+            - we can go to either 4 or 5 from 3 becouse only one step or two steps are posible
+            - we have already calculate for 4 and 5 so no need to do again
+            - sum of result of 4 and 5 would be ans for 3
+            - do same for reamining steps i.e. 2,1,0
+
+2. 1D array problems
+    i. Longest Increasing Subsequence
+        - given list of integers
+        - goal: to get length of subsequence which are in Increasing order
+        - Subsequence is subset without changing its order
+            example: given- [2,7,4,8,9]
+                - [7,4,9] is subsequence becouse order is mentained
+                - [7,2,4] not subsequence becouse 2 should come before 7
+                - [2,4,8,9] is subsequence with Increasing order
+    ii. House Robber
+
+3. 2-array problems
+    i. Minimum path sum
+    ii. 0-1 Knapsack
+
+4. String Problems
+    i. Longest common subsequence
+    ii. Edit Distance
+    iii. Interleaving String
+
+5. Counting Problems
+    i. Coin Change
+    ii. Balanced Binary Tree
+    iii. Unique Binary Search Tree
+
+6. Breaking and Partition Problems
+    i. Partition Equal Subset sum
+
+7. Mathematical Problems
+    i. Matrix chain multiplication
+    ii. Best Time To Buy and Sell stock
+
+8. Standard Problems
+    i.  Panlindromic Substrings
+    ii. Longest Panlindromic Substring
+
+
